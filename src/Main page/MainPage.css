@@ -1,0 +1,91 @@
+/* Main container to hold both sections */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    height: 100vh;
+    background-color: #f4f1e0;
+    background-repeat: repeat;
+}
+
+/* Stats Section */
+.stats-section {
+    width: 30%;
+    background-color: #e6d3aa;
+    padding: 20px;
+    border: 3px solid #8b7e66;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    background-repeat: repeat;
+}
+
+.stats-table {
+    width: 100%;
+    font-family: "Brush Script MT", cursive;
+    font-size: 32px;
+    color: #4a3c31;
+}
+
+/* Game Section */
+.game-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll {
+    width: 100%;
+    height: 200px;
+    background-color: #fff7d5;
+    padding: 20px;
+    border: 5px solid #b19872;
+    font-family: "Papyrus", fantasy;
+    font-size: 32px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-repeat: repeat;
+    color: #4a3c31;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.option {
+    background-color: #f9f3e3;
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    padding: 15px 25px;
+    margin: 15px 0;
+    border: 1px solid #8b7e66;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.option:hover {
+    background-color: #e6d3aa;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
