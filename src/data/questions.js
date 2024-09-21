@@ -5,18 +5,18 @@ const questions = [
         options: [
             {
                 text: "Accept the cheese palace. Who doesn't love cheese?",
-                reqStatus: { happiness: 50 },
-                consequences: { happiness: +30, food: +100, wealth: -200 },
+                reqStatus: { happiness: 70 },
+                consequences: { happiness: +15, food: +50, wealth: -300 },
             },
             {
                 text: "Politely decline. Cheese palaces aren't structurally sound.",
                 reqStatus: {},
-                consequences: { happiness: -10 },
+                consequences: { happiness: -20 },
             },
             {
                 text: "Challenge the wizard to a duel for his hat.",
-                reqStatus: { people: 10 },
-                consequences: { people: -5, happiness: +20, wealth: +50 },
+                reqStatus: { people: 20 },
+                consequences: { people: -10, happiness: +10, wealth: -50 },
             },
         ],
     },
@@ -26,18 +26,18 @@ const questions = [
         options: [
             {
                 text: "Negotiate with the goose using breadcrumbs as leverage.",
-                reqStatus: { food: 10 },
-                consequences: { food: -10, happiness: +15 },
+                reqStatus: { food: 20 },
+                consequences: { food: -20, happiness: +10 },
             },
             {
                 text: "Send your knights to chase the goose around the castle.",
-                reqStatus: { people: 5 },
-                consequences: { people: -5, happiness: -5 },
+                reqStatus: { people: 10 },
+                consequences: { people: -10, happiness: -15 },
             },
             {
                 text: "Declare the goose the new king and go on vacation.",
                 reqStatus: {},
-                consequences: { happiness: +30, people: -10 },
+                consequences: { happiness: +15, people: -20 },
             },
         ],
     },
@@ -47,18 +47,18 @@ const questions = [
         options: [
             {
                 text: "Host a royal dance-off in the ballroom.",
-                reqStatus: { happiness: 40 },
-                consequences: { happiness: +20, wealth: -50, people: +10 },
+                reqStatus: { happiness: 60 },
+                consequences: { happiness: +10, wealth: -100, people: +5 },
             },
             {
                 text: "Refuse. Dancing is for peasants.",
                 reqStatus: {},
-                consequences: { happiness: -10, relation: "bad" },
+                consequences: { happiness: -20, relation: "worse" },
             },
             {
                 text: "Dance in the streets with the people, but only in socks.",
-                reqStatus: { people: 10 },
-                consequences: { happiness: +30, people: +5, wealth: -20 },
+                reqStatus: { people: 20 },
+                consequences: { happiness: +15, people: +5, wealth: -50 },
             },
         ],
     },
@@ -68,22 +68,22 @@ const questions = [
         options: [
             {
                 text: "Buy the rock and display it in the royal hall.",
-                reqStatus: { wealth: 500 },
+                reqStatus: { wealth: 700 },
                 consequences: {
-                    wealth: -500,
-                    happiness: +10,
-                    relation: "better",
+                    wealth: -700,
+                    happiness: +5,
+                    relation: "slightly_better",
                 },
             },
             {
                 text: "Throw the rock in the royal lake.",
                 reqStatus: {},
-                consequences: { happiness: +5, wealth: -10, people: -5 },
+                consequences: { happiness: -10, wealth: -20, people: -10 },
             },
             {
                 text: "Convince the merchant that the rock is cursed and make him pay you.",
-                reqStatus: { relation: "medium" },
-                consequences: { wealth: +200, relation: "bad" },
+                reqStatus: { relation: "good" },
+                consequences: { wealth: +100, relation: "worse" },
             },
         ],
     },
@@ -93,18 +93,18 @@ const questions = [
         options: [
             {
                 text: "Let them eat cake!",
-                reqStatus: { food: 100 },
-                consequences: { food: -100, happiness: +20 },
+                reqStatus: { food: 150 },
+                consequences: { food: -150, happiness: +10 },
             },
             {
                 text: "Ban all cake and serve only vegetables.",
                 reqStatus: {},
-                consequences: { happiness: -20, people: -10 },
+                consequences: { happiness: -30, people: -20 },
             },
             {
                 text: "Replace the cake with a surprise...more cake!",
-                reqStatus: { wealth: 50 },
-                consequences: { wealth: -50, happiness: +30 },
+                reqStatus: { wealth: 100 },
+                consequences: { wealth: -100, happiness: +15 },
             },
         ],
     },
@@ -115,17 +115,17 @@ const questions = [
             {
                 text: "Appoint the squirrel immediately. Wise creatures, squirrels.",
                 reqStatus: {},
-                consequences: { happiness: +20, people: -5 },
+                consequences: { happiness: +10, people: -15 },
             },
             {
                 text: "Send the squirrel away and deny it ever happened.",
                 reqStatus: {},
-                consequences: { happiness: -10, people: -2 },
+                consequences: { happiness: -20, people: -5 },
             },
             {
                 text: "Challenge the squirrel to a chess match to prove its wisdom.",
-                reqStatus: { happiness: 30 },
-                consequences: { happiness: +10, relation: "good" },
+                reqStatus: { happiness: 50 },
+                consequences: { happiness: +5, relation: "slightly_better" },
             },
         ],
     },
@@ -135,18 +135,18 @@ const questions = [
         options: [
             {
                 text: "Let him sing. It's the thought that counts.",
-                reqStatus: { happiness: 50 },
-                consequences: { happiness: +10, people: -10 },
+                reqStatus: { happiness: 70 },
+                consequences: { happiness: +5, people: -20 },
             },
             {
                 text: "Politely ask him to stop before your ears fall off.",
                 reqStatus: {},
-                consequences: { happiness: +5, relation: "better" },
+                consequences: { happiness: -10, relation: "slightly_worse" },
             },
             {
                 text: "Challenge the bard to a rap battle.",
-                reqStatus: { people: 20 },
-                consequences: { happiness: +25, people: +10 },
+                reqStatus: { people: 30 },
+                consequences: { happiness: +15, people: +5 },
             },
         ],
     },
@@ -156,22 +156,22 @@ const questions = [
         options: [
             {
                 text: "Host a meteor-watching party with snacks.",
-                reqStatus: { food: 50 },
-                consequences: { food: -50, happiness: +20 },
+                reqStatus: { food: 100 },
+                consequences: { food: -100, happiness: +10 },
             },
             {
                 text: "Build a giant shield out of cheese to protect the kingdom.",
-                reqStatus: { wealth: 200 },
+                reqStatus: { wealth: 300 },
                 consequences: {
-                    wealth: -200,
-                    happiness: +10,
-                    relation: "better",
+                    wealth: -300,
+                    happiness: +5,
+                    relation: "slightly_better",
                 },
             },
             {
                 text: "Do nothing. Maybe it'll just miss.",
                 reqStatus: {},
-                consequences: { happiness: -5, people: -5 },
+                consequences: { happiness: -15, people: -15 },
             },
         ],
     },
@@ -181,18 +181,18 @@ const questions = [
         options: [
             {
                 text: "Give the horse all the carrots it wants.",
-                reqStatus: { food: 20 },
-                consequences: { food: -20, happiness: +10 },
+                reqStatus: { food: 40 },
+                consequences: { food: -40, happiness: +5 },
             },
             {
                 text: "Tell the horse to negotiate with the squirrels.",
-                reqStatus: { happiness: 30 },
-                consequences: { happiness: +10, people: +5 },
+                reqStatus: { happiness: 50 },
+                consequences: { happiness: +5, people: -10 },
             },
             {
                 text: "Replace the horse with a unicorn. Problem solved.",
-                reqStatus: { wealth: 100 },
-                consequences: { wealth: -100, happiness: +25 },
+                reqStatus: { wealth: 200 },
+                consequences: { wealth: -200, happiness: +15 },
             },
         ],
     },
@@ -203,17 +203,17 @@ const questions = [
             {
                 text: "Welcome the pigeon into the royal family.",
                 reqStatus: {},
-                consequences: { happiness: +20, people: +5 },
+                consequences: { happiness: +10, people: -10 },
             },
             {
                 text: "Send the pigeon on a royal quest.",
                 reqStatus: {},
-                consequences: { people: -5, happiness: +10 },
+                consequences: { people: -10, happiness: +5 },
             },
             {
                 text: "Accuse the pigeon of treason.",
-                reqStatus: { relation: "medium" },
-                consequences: { relation: "bad", happiness: -5 },
+                reqStatus: { relation: "good" },
+                consequences: { relation: "worse", happiness: -15 },
             },
         ],
     },
@@ -223,18 +223,18 @@ const questions = [
         options: [
             {
                 text: "Accept the offer. Dragons make great transportation!",
-                reqStatus: { wealth: 100 },
-                consequences: { wealth: -100, happiness: +30, people: +10 },
+                reqStatus: { wealth: 200 },
+                consequences: { wealth: -200, happiness: +15, people: +5 },
             },
             {
                 text: "Decline politely. You prefer your current carriage.",
                 reqStatus: {},
-                consequences: { happiness: -5, relation: "bad" },
+                consequences: { happiness: -10, relation: "worse" },
             },
             {
                 text: "Suggest a trial period with fire safety measures.",
-                reqStatus: { people: 15 },
-                consequences: { people: -5, happiness: +15, wealth: -50 },
+                reqStatus: { people: 25 },
+                consequences: { people: -10, happiness: +10, wealth: -100 },
             },
         ],
     },
@@ -244,18 +244,18 @@ const questions = [
         options: [
             {
                 text: "Implement the change immediately. Peace through laughter!",
-                reqStatus: { happiness: 60 },
-                consequences: { happiness: +40, people: -10, wealth: -100 },
+                reqStatus: { happiness: 80 },
+                consequences: { happiness: +20, people: -20, wealth: -200 },
             },
             {
                 text: "Reject the idea and send the jester to sensitivity training.",
                 reqStatus: {},
-                consequences: { happiness: -15, relation: "worse" },
+                consequences: { happiness: -25, relation: "much_worse" },
             },
             {
                 text: "Compromise by having Rubber Chicken Tuesdays.",
-                reqStatus: { people: 20 },
-                consequences: { happiness: +25, people: +5, wealth: -20 },
+                reqStatus: { people: 30 },
+                consequences: { happiness: +15, people: -5, wealth: -50 },
             },
         ],
     },
@@ -265,22 +265,22 @@ const questions = [
         options: [
             {
                 text: "Hire them immediately. Silent diplomacy is the future!",
-                reqStatus: { wealth: 150 },
+                reqStatus: { wealth: 250 },
                 consequences: {
-                    wealth: -150,
-                    happiness: +20,
-                    relation: "better",
+                    wealth: -250,
+                    happiness: +10,
+                    relation: "slightly_better",
                 },
             },
             {
                 text: "Decline. You prefer your diplomats to speak.",
                 reqStatus: {},
-                consequences: { happiness: -5, people: -5 },
+                consequences: { happiness: -15, people: -10 },
             },
             {
                 text: "Suggest a mime-diplomat collaboration program.",
-                reqStatus: { people: 25 },
-                consequences: { people: +10, happiness: +15, wealth: -50 },
+                reqStatus: { people: 35 },
+                consequences: { people: +5, happiness: +10, wealth: -100 },
             },
         ],
     },
@@ -290,18 +290,18 @@ const questions = [
         options: [
             {
                 text: "Climb the beanstalk to explore the kingdom in the clouds.",
-                reqStatus: { happiness: 70 },
-                consequences: { happiness: +30, wealth: +100, people: -10 },
+                reqStatus: { happiness: 90 },
+                consequences: { happiness: +15, wealth: +50, people: -20 },
             },
             {
                 text: "Cut down the beanstalk. It's a safety hazard!",
                 reqStatus: {},
-                consequences: { happiness: -20, relation: "worse" },
+                consequences: { happiness: -30, relation: "much_worse" },
             },
             {
                 text: "Turn it into a tourist attraction with guided tours.",
-                reqStatus: { people: 30 },
-                consequences: { people: +15, happiness: +20, wealth: +50 },
+                reqStatus: { people: 40 },
+                consequences: { people: +10, happiness: +10, wealth: -100 },
             },
         ],
     },
@@ -311,18 +311,18 @@ const questions = [
         options: [
             {
                 text: "Accept it and introduce 'Ye Olde Social Media' to the kingdom.",
-                reqStatus: { wealth: 300 },
-                consequences: { wealth: -300, happiness: +40, people: +20 },
+                reqStatus: { wealth: 400 },
+                consequences: { wealth: -400, happiness: +20, people: +10 },
             },
             {
                 text: "Refuse it. The kingdom isn't ready for such technology.",
                 reqStatus: {},
-                consequences: { happiness: -10, relation: "worse" },
+                consequences: { happiness: -20, relation: "much_worse" },
             },
             {
                 text: "Take it, but use it only for royal selfies.",
-                reqStatus: { happiness: 50 },
-                consequences: { happiness: +25, people: +5, wealth: -50 },
+                reqStatus: { happiness: 70 },
+                consequences: { happiness: +15, people: -10, wealth: -100 },
             },
         ],
     },
@@ -332,25 +332,25 @@ const questions = [
         options: [
             {
                 text: "Declare it the official royal number and mandate its use.",
-                reqStatus: { people: 40 },
+                reqStatus: { people: 50 },
                 consequences: {
-                    people: -20,
-                    happiness: +15,
-                    relation: "worse",
+                    people: -30,
+                    happiness: +10,
+                    relation: "much_worse",
                 },
             },
             {
                 text: "Dismiss the claim and send him back to counting treasury coins.",
                 reqStatus: {},
-                consequences: { happiness: -5, wealth: +20 },
+                consequences: { happiness: -15, wealth: +10 },
             },
             {
                 text: "Fund further research into this groundbreaking discovery.",
-                reqStatus: { wealth: 200 },
+                reqStatus: { wealth: 300 },
                 consequences: {
-                    wealth: -200,
-                    happiness: +10,
-                    relation: "better",
+                    wealth: -300,
+                    happiness: +5,
+                    relation: "slightly_better",
                 },
             },
         ],
@@ -361,22 +361,22 @@ const questions = [
         options: [
             {
                 text: "Grant their request. Cats make excellent judges!",
-                reqStatus: { happiness: 80 },
+                reqStatus: { happiness: 100 },
                 consequences: {
-                    happiness: +30,
-                    people: -15,
-                    relation: "better",
+                    happiness: +15,
+                    people: -25,
+                    relation: "slightly_better",
                 },
             },
             {
                 text: "Reject their demand. The kingdom is not ready for feline leadership.",
                 reqStatus: {},
-                consequences: { happiness: -20, relation: "worse" },
+                consequences: { happiness: -30, relation: "much_worse" },
             },
             {
                 text: "Compromise by appointing a royal 'Meowselor'.",
-                reqStatus: { people: 35 },
-                consequences: { people: +10, happiness: +20, wealth: -30 },
+                reqStatus: { people: 45 },
+                consequences: { people: +5, happiness: +10, wealth: -60 },
             },
         ],
     },
@@ -386,21 +386,21 @@ const questions = [
         options: [
             {
                 text: "Embrace it! Declare a national lemonade festival.",
-                reqStatus: { food: 150 },
-                consequences: { food: -150, happiness: +40, people: +15 },
+                reqStatus: { food: 200 },
+                consequences: { food: -200, happiness: +20, people: +10 },
             },
             {
                 text: "Demand he fix it immediately or face the royal squirt gun.",
                 reqStatus: {},
-                consequences: { happiness: -10, relation: "worse" },
+                consequences: { happiness: -20, relation: "much_worse" },
             },
             {
                 text: "Export the lemonade and use the profits to buy water from neighboring kingdoms.",
-                reqStatus: { wealth: 250 },
+                reqStatus: { wealth: 350 },
                 consequences: {
-                    wealth: +100,
-                    happiness: +20,
-                    relation: "better",
+                    wealth: +50,
+                    happiness: +10,
+                    relation: "slightly_better",
                 },
             },
         ],
@@ -411,47 +411,256 @@ const questions = [
         options: [
             {
                 text: "Approve the plan. Sky's the limit for urban development!",
-                reqStatus: { people: 50 },
-                consequences: { people: +20, happiness: +30, wealth: -100 },
+                reqStatus: { people: 60 },
+                consequences: { people: +10, happiness: +15, wealth: -200 },
             },
             {
                 text: "Reject the proposal. Your kingdom stays firmly on the ground.",
                 reqStatus: {},
-                consequences: { happiness: -15, relation: "worse" },
+                consequences: { happiness: -25, relation: "much_worse" },
             },
             {
                 text: "Negotiate for shared airspace and establish a cloud embassy.",
-                reqStatus: { relation: "good" },
+                reqStatus: { relation: "very_good" },
                 consequences: {
-                    relation: "better",
-                    happiness: +25,
-                    wealth: +50,
+                    relation: "slightly_better",
+                    happiness: +15,
+                    wealth: -100,
                 },
             },
         ],
     },
     {
         id: 20,
-        title: "Your royal portrait painter insists on painting you as a potato. What's your royal decree?",
+        title: "A group of talking squirrels has taken over the royal kitchen. What do you do?",
         options: [
             {
-                text: "Allow it. Embrace your inner spud!",
-                reqStatus: { happiness: 90 },
+                text: "Negotiate a food-sharing agreement with the squirrels.",
+                reqStatus: { food: 50 },
                 consequences: {
-                    happiness: +35,
-                    people: +10,
-                    relation: "better",
-                },
+                    food: -50,
+                    happiness: +10,
+                    relations: "better",
+                }, // Squirrels increase kingdom happiness
             },
             {
-                text: "Refuse and demand a traditional portrait.",
+                text: "Set traps to capture the squirrels.",
+                reqStatus: { people: 10 },
+                consequences: { people: -10, happiness: -20, food: +30 }, // Loss of people, gain some food
+            },
+            {
+                text: "Promote the squirrels to royal chefs.",
                 reqStatus: {},
-                consequences: { happiness: -10, relation: "worse" },
+                consequences: { food: -30, happiness: +30 }, // Big happiness boost, lose food
+            },
+        ],
+    },
+    {
+        id: 21,
+        title: "A mysterious old man offers you a single enchanted potato. What do you do?",
+        options: [
+            {
+                text: "Accept the potato and plant it.",
+                reqStatus: {},
+                consequences: { food: +200, wealth: -50 }, // Big food gain, slight wealth loss
             },
             {
-                text: "Compromise with a half-human, half-potato portrait.",
+                text: "Throw it into the royal compost pile.",
+                reqStatus: {},
+                consequences: { food: -10, happiness: -10 }, // Negligible but still bad
+            },
+            {
+                text: "Turn the potato into a magical stew and invite the neighboring king for dinner.",
+                reqStatus: { relations: "medium" },
+                consequences: {
+                    relations: "better",
+                    happiness: +10,
+                    wealth: -100,
+                }, // Diplomatic boost, wealth loss
+            },
+        ],
+    },
+    {
+        id: 22,
+        title: "A bard offers to compose a ballad about your greatness. What do you do?",
+        options: [
+            {
+                text: "Pay him handsomely and commission the ballad.",
+                reqStatus: { wealth: 200 },
+                consequences: { wealth: -200, happiness: +20 }, // Big happiness boost, but costly
+            },
+            {
+                text: "Refuse, saying you prefer to remain mysterious.",
+                reqStatus: {},
+                consequences: { happiness: -10 }, // Small happiness loss
+            },
+            {
+                text: "Challenge him to a rap battle instead.",
+                reqStatus: { people: 10 },
+                consequences: { happiness: +30, people: -10 }, // Big happiness boost, small people loss
+            },
+        ],
+    },
+    {
+        id: 23,
+        title: "The royal cat has been elected mayor of a neighboring kingdom. What do you do?",
+        options: [
+            {
+                text: "Send a congratulatory gift of 50 loaves of bread.",
+                reqStatus: { food: 50 },
+                consequences: { food: -50, relations: "better" }, // Diplomatic boost
+            },
+            {
+                text: "Laugh it off and send no gift.",
+                reqStatus: {},
+                consequences: { relations: "worse", happiness: -5 }, // Small happiness loss
+            },
+            {
+                text: "Challenge the cat to a duel for control of the kingdom.",
+                reqStatus: { people: 20 },
+                consequences: {
+                    people: -20,
+                    wealth: +100,
+                    relations: "really bad",
+                }, // Huge diplomatic hit, wealth gain
+            },
+        ],
+    },
+    {
+        id: 24,
+        title: "A chef presents you with a soup made of gemstones. How do you respond?",
+        options: [
+            {
+                text: "Compliment the chef and pretend to enjoy the soup.",
+                reqStatus: {},
+                consequences: { happiness: +5, wealth: -50 }, // Slight happiness gain, slight wealth loss
+            },
+            {
+                text: "Tell the chef to stick to real ingredients.",
+                reqStatus: {},
+                consequences: { happiness: -10 }, // Small happiness loss
+            },
+            {
+                text: "Sell the soup to another kingdom as a rare delicacy.",
+                reqStatus: { relations: "medium" },
+                consequences: { wealth: +200, relations: "worse" }, // Wealth boost, relations suffer
+            },
+        ],
+    },
+    {
+        id: 25,
+        title: "A magical plant grows in your garden overnight. It glows in the dark. What do you do?",
+        options: [
+            {
+                text: "Sell it to a curious scholar.",
                 reqStatus: { wealth: 100 },
-                consequences: { wealth: -100, happiness: +20, people: +5 },
+                consequences: { wealth: +200, relations: "better" }, // Big wealth gain, relations improve
+            },
+            {
+                text: "Eat it to see what happens.",
+                reqStatus: {},
+                consequences: { happiness: +50, people: -20 }, // Happiness increase, lose some people in the chaos
+            },
+            {
+                text: "Ignore it. Plants are boring.",
+                reqStatus: {},
+                consequences: { happiness: -10 }, // Small happiness loss
+            },
+        ],
+    },
+    {
+        id: 26,
+        title: "A talking horse offers to join your council. What’s your decision?",
+        options: [
+            {
+                text: "Allow the horse to join. It could bring unique wisdom.",
+                reqStatus: { people: 20 },
+                consequences: { happiness: +30, people: -20 }, // Big happiness gain, lose people
+            },
+            {
+                text: "Decline, stating that horses are for riding, not advising.",
+                reqStatus: {},
+                consequences: { happiness: -20 }, // Big happiness drop
+            },
+            {
+                text: "Send the horse as a gift to a neighboring king.",
+                reqStatus: { relations: "medium" },
+                consequences: { relations: "better", wealth: +100 }, // Relations improve, wealth gain
+            },
+        ],
+    },
+    {
+        id: 27,
+        title: "A pirate ship appears off the coast. What’s your plan?",
+        options: [
+            {
+                text: "Send a diplomat to negotiate a trade deal.",
+                reqStatus: { wealth: 300 },
+                consequences: { wealth: -300, relations: "better" }, // Diplomatic boost but big cost
+            },
+            {
+                text: "Order your navy to attack the pirates.",
+                reqStatus: { people: 50 },
+                consequences: { people: -50, wealth: +500, relations: "worse" }, // Big people loss, wealth gain, bad relations
+            },
+            {
+                text: "Offer the pirates a royal pardon in exchange for loyalty.",
+                reqStatus: { relations: "medium" },
+                consequences: {
+                    relations: "better",
+                    wealth: -100,
+                    people: +30,
+                }, // Diplomatic gain, wealth loss, people boost
+            },
+        ],
+    },
+    {
+        id: 28,
+        title: "A scientist offers to build a flying machine for the kingdom. What do you decide?",
+        options: [
+            {
+                text: "Fund the project and hope for success.",
+                reqStatus: { wealth: 500 },
+                consequences: {
+                    wealth: -500,
+                    happiness: +20,
+                    relations: "better",
+                }, // Big wealth loss, slight happiness gain
+            },
+            {
+                text: "Reject the offer. Who needs flying anyway?",
+                reqStatus: {},
+                consequences: { happiness: -15, wealth: +100 }, // Happiness loss, wealth gain
+            },
+            {
+                text: "Send the scientist to a rival kingdom as a gift.",
+                reqStatus: { relations: "medium" },
+                consequences: { relations: "better", wealth: +200 }, // Relations boost, wealth gain
+            },
+        ],
+    },
+    {
+        id: 29,
+        title: "Your jester invents a new game called 'Spoon Jousting.' It’s becoming wildly popular. What’s your move?",
+        options: [
+            {
+                text: "Encourage the game and host a national tournament.",
+                reqStatus: { wealth: 300 },
+                consequences: { wealth: -300, happiness: +50 }, // Big happiness gain, wealth loss
+            },
+            {
+                text: "Ban the game, claiming it distracts people from their duties.",
+                reqStatus: { people: 10 },
+                consequences: { happiness: -30, people: +10 }, // Big happiness loss
+            },
+            {
+                text: "Invite neighboring kingdoms to a Spoon Jousting competition.",
+                reqStatus: { relations: "medium" },
+                consequences: {
+                    relations: "better",
+                    wealth: -100,
+                    happiness: +20,
+                }, // Relations boost, wealth loss, happiness gain
             },
         ],
     },
