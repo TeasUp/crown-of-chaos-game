@@ -1,0 +1,83 @@
+.war-page {
+    background-color: #8b7355;
+    color: #f5deb3;
+    font-family: "Luminari", "Papyrus", fantasy;
+    padding: 20px;
+    border: 10px solid #4a3728;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.war-page .stats-section,
+.war-page .war-effort-section {
+    background-color: rgba(74, 55, 40, 0.7);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.war-page h2 {
+    color: #ffd700;
+    text-shadow: 2px 2px 4px #000000;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.war-page .input-group {
+    margin-bottom: 15px;
+}
+
+.war-page label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffd700;
+}
+
+.war-page input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #4a3728;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.war-page input[type="range"]:hover {
+    opacity: 1;
+}
+
+.war-page input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ffd700;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.war-page button {
+    background-color: #8b0000;
+    color: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-family: "Luminari", "Papyrus", fantasy;
+    width: 100%;
+}
+
+.war-page button:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+.war-page span {
+    color: #ffd700;
+    font-weight: bold;
+    margin-left: 10px;
+}

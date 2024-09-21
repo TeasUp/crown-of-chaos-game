@@ -2,44 +2,41 @@ import React, { useState, useEffect } from "react";
 import questions from "../data/questions";
 import "./MainPage.css";
 
-const MainPage = () => {
-    const [stats, setStats] = useState({
-        wealth: 1000,
-        food: 200,
-        people: 100,
-        happiness: "60%",
-        relations: "medium",
-    });
-    const [currentQuestion, setCurrentQuestion] = useState(
-        Math.round(Math.random() * questions.length)
-    );
+function MainPage({
+    stats,
+    updateStats,
+    currentQuestion,
+    setCurrentQuestion,
+    goToWar,
+}) {
     const [question, setQuestion] = useState(questions[0]);
 
     useEffect(() => {
-        setQuestion(questions[currentQuestion] || questions[0]); // Reset to first question if out of bounds
+        setQuestion(questions[currentQuestion - 1] || questions[0]);
     }, [currentQuestion]);
 
-    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-
     const handleOptionClick = (option) => {
-        setStats((prevStats) => {
-            const newStats = { ...prevStats };
-            Object.keys(option.consequences).forEach((key) => {
+        const newStats = { ...stats };
+        Object.keys(option.consequences).forEach((key) => {
+            if (key === "happiness") {
+                newStats[key] = `${Math.min(
+                    Math.max(
+                        parseInt(newStats[key]) + option.consequences[key],
+                        0
+                    ),
+                    100
+                )}%`;
+            } else {
                 newStats[key] += option.consequences[key];
-            });
-            newStats.happiness = `${clamp(
-                parseInt(newStats.happiness) +
-                    (option.consequences.happiness || 0),
-                0,
-                100
-            )}%`;
-            return newStats;
+            }
         });
+        updateStats(newStats);
 
-        // Move to the next question or loop back to the first question
-        setCurrentQuestion((prev) =>
-            prev + 1 < questions.length ? prev + 1 : 0
-        );
+        if (currentQuestion % 10 === 0) {
+            goToWar();
+        } else {
+            setCurrentQuestion(currentQuestion + 1);
+        }
     };
 
     return (
@@ -90,6 +87,6 @@ const MainPage = () => {
             </div>
         </div>
     );
-};
+}
 
 export default MainPage;

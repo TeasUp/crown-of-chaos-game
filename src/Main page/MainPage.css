@@ -9,7 +9,7 @@
 }
 
 /* Stats Section */
-.stats-section {
+.main-container .stats-section {
     width: 30%;
     background-color: #e6d3aa;
     padding: 20px;
@@ -19,7 +19,7 @@
     background-repeat: repeat;
 }
 
-.stats-table {
+.main-container .stats-table {
     width: 100%;
     font-family: "Brush Script MT", cursive;
     font-size: 32px;
@@ -27,14 +27,14 @@
 }
 
 /* Game Section */
-.game-section {
+.main-container .game-section {
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.scroll {
+.main-container .scroll {
     width: 100%;
     height: 200px;
     background-color: #fff7d5;
@@ -51,13 +51,13 @@
     text-align: center;
 }
 
-.options {
+.main-container .options {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.option {
+.main-container .option {
     background-color: #f9f3e3;
     font-family: "Courier New", monospace;
     font-size: 18px;
@@ -72,8 +72,8 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.option::before {
-    content: '';
+.main-container .option::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -84,7 +84,7 @@
     z-index: -1;
 }
 
-.option:hover {
+.main-container .option:hover {
     background-color: #e6d3aa;
     transform: translateY(-2px);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
