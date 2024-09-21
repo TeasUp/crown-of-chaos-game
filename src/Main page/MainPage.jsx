@@ -34,9 +34,8 @@ function MainPage({
 
         if (currentQuestion % 10 === 0) {
             goToWar();
-        } else {
-            setCurrentQuestion(currentQuestion + 1);
         }
+        setCurrentQuestion(currentQuestion + 1);
     };
 
     return (
