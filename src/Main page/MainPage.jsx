@@ -27,7 +27,11 @@ function MainPage({
                     100
                 )}%`;
             } else {
-                newStats[key] += option.consequences[key];
+                if (key === "relations") {
+                    newStats[key] = option.consequences[key];
+                } else {
+                    newStats[key] += option.consequences[key];
+                }
             }
         });
         updateStats(newStats);
